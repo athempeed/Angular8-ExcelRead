@@ -1,0 +1,20 @@
+<div class="row">
+  <input
+    type="file"
+    (change)="uploadFile($event.target.files)"
+    id="fileUpload"
+  />
+</div>
+<div class="row">
+  <div
+    class="uploadfilecontainer"
+    appDragDrop
+    (onFileDropped)="uploadFile($event)"
+  ></div>
+</div>
+<div class="row">
+  <label>{{ filename }}</label>
+</div>
+<div class="row">
+  <app-salesodertable [rows]="rows"></app-salesodertable>
+</div>

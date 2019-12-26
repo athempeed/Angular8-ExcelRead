@@ -1,0 +1,30 @@
+<div class="row">
+  <button (click)="showData()">Upload</button>
+</div>
+<table class="table table-stripped">
+  <thead>
+    <th>No</th>
+    <th>Plant</th>
+    <th>Material</th>
+    <th>RequestedDeliveryDate</th>
+    <th>SalesDoc</th>
+    <th>SoldToName</th>
+    <th>ShipToName</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows; let i = index">
+      <td>{{ row.No }}</td>
+      <td>{{ row.Plant }}</td>
+      <td>{{ row.Material }}</td>
+      <td>{{ row.RequestedDeliveryDate | date: "medium" }}</td>
+      <td>{{ row.SalesDoc }}</td>
+      <td>{{ row.SalesToName }}</td>
+      <td>{{ row.ShipToName }}</td>
+      <td><input type="checkbox" (change)="updateSelected($event, i)" /></td>
+    </tr>
+  </tbody>
+</table>
+<div class="row">
+  <button class="btn btn-primary" (click)="saveRows()">Save</button>
+</div>
