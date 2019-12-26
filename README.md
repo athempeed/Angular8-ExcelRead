@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Special Note:
+at the time of building this app, there was some issue in node module "exceljs". Do not get furstated if you face this issue
+
+     " ../node_modules/exceljs/index.d.ts:1511:34 - error TS2503: Cannot find namespace 'NodeJS'"
+
+To fix this issue go to excelJs folder inside node_modules and remove the Node Js and line from index.d.ts.
